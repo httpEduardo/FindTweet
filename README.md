@@ -1,40 +1,40 @@
-# Mastodon Bot: Twitter Crawler
+# Mastodon Bot: Rastreador do Twitter
 
-## Introduction
+## Introdução
 
-Mastodon Bot crawling tweets from Twitter accounts.
+Mastodon Bot rastreando tweets de contas do Twitter.
 
-This was initially developed to collect official notices from an online game. Unfortunately, there were no other alternative channels to crawl info from..
+Isso foi desenvolvido inicialmente para coletar avisos oficiais de um jogo online. Infelizmente, não havia outros canais alternativos para rastrear informações.
 
-## Disclaimer
+## Isenção de responsabilidade
 
-**Please refrain from creating bots to track individuals.**
+**Evite criar bots para rastrear indivíduos.**
 
-I don't hold any liability against any damages or losses from using my project.
+Não me responsabilizo por quaisquer danos ou perdas decorrentes do uso do meu projeto.
 
-It is highly recommended to set the toot's visibility to `private` to ensure that your bot isn't polluting the entire Federation.
+É altamente recomendável definir a visibilidade do toot como `private` para garantir que seu bot não esteja poluindo toda a Federação.
 
 
-##  Installation & Usage
+## Instalação e uso
 
-The project is tested in Python 3.10, Debian 11
+O projeto é testado em Python 3.10, Debian 11
 
 ```bash
-$ # Install dependencies
-$ pip3 install -r requirements.txt
-$ # Setup your environment file (Refer to .env.example)
+$ # Instalar dependências
+$ pip3 install -r requisitos.txt
+$ # Configure seu arquivo de ambiente (consulte .env.example)
 $ cp .env.example .env
-$ vi .env
-$ # Run and see if everything works.
+$vi.env
+$ # Execute e veja se tudo funciona.
 $ python3 main.py
 ```
 
-You may also keep `systemd/mastodonbot.service` to run the bot running as daemon.
+Você também pode manter `systemd/mastodonbot.service` para executar o bot como daemon.
 
 ```bash
 $ cp systemd/mastodonbot.service /etc/systemd/system/mastodonbot.service
 $ systemctl daemon-reload
-$ systemctl enable mastodonbot
+$ systemctl habilita mastodonbot
 $ systemctl start mastodonbot
 ```
 # FindTweet
